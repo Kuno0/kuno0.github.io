@@ -413,7 +413,7 @@ li .description {
 }
 
 
-@media(max-width: 425px) {
+@media(max-width: 366px) {
 	h1.name {
 		font-size: 40px;
 	}
