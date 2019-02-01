@@ -426,8 +426,14 @@ li .description {
 	}
 
 	.timeline{
-		display: none;
-		}
+		border: none;
+		background-color: rgba(0,0,0,0);
+	}
+
+	.timeline li{
+		margin-top: 70px;
+		height: 150px;
+	}
 
 	.job-title {
 		position: absolute;
