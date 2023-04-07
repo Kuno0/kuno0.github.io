@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<meta charset="UTF-8">
+<title>Bard Generator v69</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .column {
+        float: left;
+        padding: 10px;
+        height: 300px;
+    }
+
+    .column.side {
+        width: 40%;
+    }
+
+    .column.middle {
+        width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: "auto"
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .footer {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        .column.side,
+        .column.middle {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <h1>The matias half keyboard generator</h1>
+    </div>
+
+    <div class="row">
+        <div class="column side" style="background-color:#aaa;">
+            <p>Input you text of choice and get back some technological poetry:</p>
+            <form id="inputForm">
+                <textarea rows="8" cols="80" name="text" id="inputText" placeholder="Enter text"></textarea>
+                <br><br>
+                <input type="button" onclick="fun_bard()" value="Translate">
+                <br><br>
+            </form>
+        </div>
+
+        <div class="column middle" style="background-color:#ffffff;">
+            <img src="MatiasHalfKeyboard.jpg" alt="Matias" width="100%">
+
+        </div>
+        <div class="column side" style="background-color:#ccc;">
+            <p>Translation:</p>
+            <form id="outputForm">
+                <textarea rows="8" cols="80" name="text" id="outputText" placeholder="translation"></textarea>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+    <script>
+        function fun_bard() {
+            var inp = document.getElementById("inputText").value;
+
+            let output = inp.toLowerCase()
+            output = output.replaceAll("oa", "a")
+                .replaceAll("orks", "erx")
+                .replaceAll("is", "es")
+                .replaceAll("the", "das")
+                .replaceAll("very", "ver")
+                .replaceAll("i", "a")
+                .replaceAll("j", "a")
+                .replaceAll("oo", "a")
+                .replaceAll("o", "a")
+                .replaceAll("au", "oo")
+                .replaceAll("ch", "cx")
+                .replaceAll("all", "aw")
+                .replaceAll("mm", "b")
+                .replaceAll("p", "b")
+                .replaceAll("ks", "x")
+                .replaceAll("n", "")
+                .replaceAll("h", "")
+                .replaceAll("k", "c")
+                .replaceAll("ce", "s")
+                .replaceAll("y", "a")
+                .replaceAll("m", "")
+                .replaceAll("l", "s")
+                .replaceAll("z", "s")
+                .replaceAll("ö", "e")
+                .replaceAll("ü", "e")
+                .replaceAll("ä", "e")
+                .replaceAll("u", "e")
+
+            document.getElementById("outputText").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
