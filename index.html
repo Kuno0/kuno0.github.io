@@ -10,10 +10,11 @@
 
     body {
         font-family: Arial, Helvetica, sans-serif;
+        background-color: aqua;
     }
 
     .header {
-        background-color: #f1f1f1;
+        background-color: #ff0000;
         padding: 30px;
         text-align: center;
         font-size: 35px;
@@ -43,12 +44,12 @@
     }
 
     .footer {
-        background-color: #f1f1f1;
+        background-color: #ff00d4;
         padding: 10px;
         text-align: center;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
         .column.side,
         .column.middle {
             width: 100%;
@@ -63,10 +64,10 @@
     </div>
 
     <div class="row">
-        <div class="column side" style="background-color:#aaa;">
-            <p>Input you text of choice and get back some technological poetry:</p>
+        <div class="column side" style="background-color:#5900ff;">
+            <p>Input you text of choice:</p>
             <form id="inputForm">
-                <textarea rows="8" cols="80" name="text" id="inputText" placeholder="Enter text"></textarea>
+                <textarea rows="4" cols="40" name="text" id="inputText" placeholder="Enter text"></textarea>
                 <br><br>
                 <input type="button" onclick="fun_bard()" value="Translate">
                 <br><br>
@@ -74,13 +75,13 @@
         </div>
 
         <div class="column middle" style="background-color:#ffffff;">
-            <img src="MatiasHalfKeyboard.jpg" alt="Matias" width="100%">
+            <img src="MatiasHalfKeyboard.jpg" alt="Matias" height="100%">
 
         </div>
-        <div class="column side" style="background-color:#ccc;">
-            <p>Translation:</p>
+        <div class="column side" style="background-color:#00ff15;">
+            <p>Output:</p>
             <form id="outputForm">
-                <textarea rows="8" cols="80" name="text" id="outputText" placeholder="translation"></textarea>
+                <textarea rows="4" cols="40" name="text" id="outputText" placeholder="output"></textarea>
             </form>
         </div>
     </div>
